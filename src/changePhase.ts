@@ -15,7 +15,7 @@ Future phases?
  - growing radicle
 */
 
-let timeOfDay = -1;
+let timeOfDay = -1; //a feature I plan to implement soon
 type Color = { r: number, g: number, b: number }
 
 function awakening() {
