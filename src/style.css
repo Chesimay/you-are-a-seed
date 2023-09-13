@@ -1,0 +1,184 @@
+:root {
+  --background: rgb(0, 0, 0);
+  --text-color: rgb(250, 235, 215);
+  --button-color: rgb(200,155,140);
+  --un-button-color: rgb(90,90,90);
+  --span-color: goldenrod;
+}
+
+body {
+  background-color: var(--background);
+}
+
+h6 {
+  color: var(--text-color);
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  display: inline;
+  font-size: small;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+span{
+  color:var(--span-color);
+}
+
+p{
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: medium;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+footer{
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  z-index: 10;
+}
+
+
+table {
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  margin:auto;
+}
+
+th {
+  text-align: center;
+  padding: 8px;
+}
+
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+/*Classes*/
+
+.main_button {
+  background-color: var(--button-color);
+  color: var(--text-color);
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: small;
+  border-radius: 5%;
+  transition: opacity 1s ease-in-out;
+  flex-grow: 1;
+}
+
+.unclickable-button{
+  color: var(--un-button-color);
+}
+
+.flex-container {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 20px;
+  /*background-color: #1faadb;*/
+  justify-content: space-between;
+  flex-wrap: nowrap;
+/*  
+  *display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  /*display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+  /*display: -ms-flexbox; /* TWEENER */
+  /*display: -webkit-flex;     /* NEW - Chrome */
+  /*display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+*/
+  /*background-color: var(--background);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; */
+}
+
+.vert-container {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+*/
+  background-color: var(--background);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  padding: 10px;
+}
+
+.item {
+  background-color: var(--background);
+  font-size: 15px;
+  transition: opacity 1s ease-in;
+  flex-grow: 1;
+  
+  /*align-items: left; */
+} 
+
+.popup {
+  display: none;
+  position: absolute;
+  padding: 2px;
+  background-color: var(--background);
+  border: 1px solid var(--text-color);
+  border-radius: 5%;  
+  line-height: 5%;
+}
+.popup-row {
+  display: flex;
+  justify-content: space-between; 
+  gap: 25px;/* Space between columns */
+}
+.left-text {
+  text-align: left;
+}
+.right-text {
+  text-align: right;
+}
+.popup-text{
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: smaller;
+}
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style for the modal dialog box */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: var(--background); /*disable all events in the parent div to freeze everything behind it*/
+}
+
+/* Style for the dialog box content */
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+/* Style for the close button */
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}

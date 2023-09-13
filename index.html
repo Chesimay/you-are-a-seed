@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>The Dry Dark of Dormancy</title>
+    <link href="style.css">
+</head>
+
+<body style="margin:0"> <!--onload = "main.trueLoad()" maybe???-->
+    <!--GROWTH TAB-->
+    <div id="tab_growth" style="width: 100vw; max-width: 100%">
+        <div class="flex-container">
+            <!--Descriptive Text-->
+            <div class="item" id="narrative" style="max-width: 20%; min-width: 20%;"></div>
+            <!--Buttons Which Do Stuff, Seperated By Related Plant Part-->
+            <div class="item" id="buttons_which_do_stuff" style="flex-grow: 4;">
+                <div class="vert-container">
+                    <h6 class = "item" id="dry_INTRO">Your <span id="testa_INTRO" style="color:goldenrod">testa</span> detects no water.</h6>
+                    <!--Testa Tasks-->
+                    <div class="flex-container" id="testa_tasks" style="opacity: 0;">
+                        <h6 class="item left-text" id="testa"><!--Testa--></h6>
+                        <button class="main_button" id="H2O_testa" style="opacity: 0;">Uptake Water</button>
+                    </div>
+                    <!--Cotelydon Tasks-->
+                    <div class="flex-container" id="cotelydon_tasks" style="opacity: 0;">
+                        <h6 class="item left-text" id="cotelydon"><!--Cotelydon--></h6>
+                        <div class="vert-container" id="cotelydon_buttons">
+                            <p class="item" id="amylase_counter">Amylase: 1</p>
+                            <button class="main_button" id="glucose_production" style="opacity: 0;">Toggle Glucose Production ON</button>
+                            <h6 class="item" id="respire_header"></h6>
+                            <p class="item" id="respire_text"></p>
+                            <button class="main_button" id="cotelydon_respiration" style="opacity: 0;">Do Cellular Respiration</button>
+                        </div>
+                    </div>
+            
+                    <!--Radicle/Root Tasks-->
+                    <div class="flex-container" id="radicle_root_tasks" style="opacity: 0;">
+                        <h6 class="item" id="radicle"></h6> 
+                    </div>
+                    <!--Plumule/Leaf Task-->
+                    <div class="flex-container" id="plumule_leaf_tasks" style="opacity: 0;">
+                        <h6 class="item" id="plumule"></h6> 
+                    </div>
+                    <!--Vascular Tissue (Xylem and Phloem) Tasks-->
+                    <div class="flex-container" id="vascular_tasks" style="opacity: 0;">
+                        <h6 class="item" id="vascular_tissue"></h6> 
+                    </div>
+                </div>
+            </div>
+            <!--Resources Table-->
+            <div class="item" id="resources_sector" style="opacity:0; font-size: small;">
+                <table id = "resources_list">
+                    <tr>
+                        <th>RESOURCE</th>
+                        <th>CHEMICAL TITLE</th>
+                        <th>#</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type = "module" src="/src/main.ts"></script>
+    <!--javascript module system-->
+
+    <footer>
+        <p>
+            <span id="save">save</span>
+            &#x25CF;
+            <span id="load">load</span>
+            &#x25CF;
+            <span id="reset">reset</span>
+        </p>
+    </footer>
+</body>
+
+</html>
